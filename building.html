@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="assets/js/script.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+
+    <title>Building | Shivam's Portfolio</title>
+  </head>
+  <body>
+    <div class="relative">
+
+
+      <div class="w-full h-20 fixed top-0 z-4" style="background:rgba(255,255,255,1)"></div>
+      <div class="h-16 w-full invisible"></div>
+      <div class="w-full top-5 sticky z-5" style="background: rgba(255,255,255,1);">
+        <div class="max-w-5xl mx-auto px-6">
+          <div class="flex">
+            <a href="index.html"><img src="assets/img/favicon.png" alt="logo" style="float: left;" class="w-10"></a>
+            <div class="ml-auto">
+              <span class="openbtn" id="openBtn" style="font-size:30px; cursor:pointer; z-index: 999;" onclick="openNav()"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="nav" class="fixed top-0 bottom-0 right-0 bg-white w-72 p-6 z-40 shadow -right-96" style="transition:all 0.4s ease;">
+        <div class="flex">
+          <button class="text-xl text-gray-1 ml-auto closebtn" style="font-size:30px; cursor:pointer;" onclick="closeNav()"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
+        </div>
+        <div class="flex flex-col justify-center items-end h-full">
+          <a class="text-4xl my-4 text-gray1" href="index.html">Home</a>
+          <a class="text-4xl my-4 text-gray1" href="building.html">Building</a>
+          <a class="text-4xl my-4 text-gray1" href="nonprofits.html">Nonprofits</a>
+          <a class="text-4xl my-4 text-gray1" href="research.html">Research</a>
+        </div>
+      </div>
+
+
+
+    <div class="max-w-5xl mx-auto px-6 mt-16">
+      <div class="text-4xl  mb-2"><span>Building</span></div>
+      <div class="text-xl  text-gray-400 mb-2"><span>Some webapps, computer apps, and websites I've made...</span></div>
+      <div class="md:flex md:-mx-12">
+        <div class="md:w-1/2 md:mx-12">
+          <p class="font-code text-xl mb-8 mt-24" style="font-weight: 300 !important;">&lt;projects&gt;</p>
+
+
+          <div class="my-8">
+            <p class=" text-xl"> <span class="">WebPOSE</span></p>
+            <div class="flex items-center mt-1">
+              <a class="icon ease-linear duration-100" href="https://github.com/shivamsyal/webpose" target="_blank"><div class="flex items-center rounded-full mx-1 font-light  text-lg"><i class="fa-brands fa-github"></i></div></a>
+              <a class="icon ease-linear duration-100" href="https://devpost.com/software/webpose" target="_blank"><div class="flex items-center rounded-full mx-1 font-light  text-md"><i class="fa-solid fa-link"></i></div></a>
+            </div>
+            <p class=" text-gray-400 text-base mt-3">A desktop app for correcting your posture and potentially preventing osteoarthritis. Using computer vision and machine learning, WebPOSE provides position changes when you're maintaining poor posture.</p>
+            <a><img src="assets/img/webpose.png" alt="" class="w-full mr-6 my-8 shadow-xl hover:shadow-md transition"></a>
+            <div class="flex items-center mt-2">
+              <div class="flex items-center rounded-full bg-gray-200 px-2 mx-1 font-light  text-sm">Python</div>
+              <div class="flex items-center rounded-full bg-gray-200 px-2 mx-1 font-light  text-sm">Keras</div>
+              <div class="flex items-center rounded-full bg-gray-200 px-2 mx-1 font-light  text-sm">OpenCV</div>
+              <div class="flex items-center rounded-full bg-gray-200 px-2 mx-1 font-light  text-sm">TKinter</div>
+            </div>
+          </div>
+          <hr class="my-12">
+
+          <div class="my-8">
+            <p class=" text-xl"> <span class="">PictureBook</span></p>
+            <div class="flex items-center mt-1">
+              <a class="icon ease-linear duration-100" href="https://github.com/shivamsyal/picturebook" target="_blank"><div class="flex items-center rounded-full mx-1 font-light  text-lg"><i class="fa-brands fa-github"></i></div></a>
+              <a class="icon ease-linear duration-100" href="https://shivamsyal.com/picturebook/" target="_blank"><div class="flex items-center rounded-full mx-1 font-light  text-md"><i class="fa-solid fa-link"></i></div></a>
+            </div>
+            <p class=" text-gray-400 text-base mt-3">A Chrome extension that translate Google Meet's CC to provide closed-captions with image translation as well as applied review with flashcards. Helping early ESL learners effectively learn English.</p>
+            <a><img src="assets/img/picturebook.png" alt="" class="w-full mr-6 my-8 shadow-xl hover:shadow-md transition"></a>
+            <div class="flex items-center mt-2">
+              <div class="flex items-center rounded-full bg-gray-200 px-2 mx-1 font-light  text-sm">HTML</div>
+              <div class="flex items-center rounded-full bg-gray-200 px-2 mx-1 font-light  text-sm">JavaScript</div>
+              <div class="flex items-center rounded-full bg-gray-200 px-2 mx-1 font-light  text-sm">SCSS</div>
+            </div>
+          </div>
+          <hr class="my-12">
+          <div class="my-8">
+            <p class=" text-xl"> <span class="">Good Neighbor</span></p>
+            <div class="flex items-center mt-1">
+              <a class="icon ease-linear duration-100" href="https://github.com/shivamsyal/good-neighbor" target="_blank"><div class="flex items-center rounded-full mx-1 font-light  text-lg"><i class="fa-brands fa-github"></i></div></a>
+              <a class="icon ease-linear duration-100" href="https://shivamsyal.com/building/" target="_blank"><div class="flex items-center rounded-full mx-1 font-light  text-md"><i class="fa-solid fa-link"></i></div></a>
+            </div>
+            <p class=" text-gray-400 text-base mt-3">A web app which uses crowdsourcing to connet people to people. It allows person-to-person donations for food, clothes and other goods.</p>
+            <a><img src="assets/img/goodneighbor.png" alt="" class="w-full mr-6 my-8 shadow-xl hover:shadow-md transition"></a>
+            <div class="flex items-center mt-2">
+              <div class="flex items-center rounded-full bg-gray-200 px-2 mx-1 font-light  text-sm">Python</div>
+              <div class="flex items-center rounded-full bg-gray-200 px-2 mx-1 font-light  text-sm">React</div>
+              <div class="flex items-center rounded-full bg-gray-200 px-2 mx-1 font-light  text-sm">Leaflet</div>
+              <div class="flex items-center rounded-full bg-gray-200 px-2 mx-1 font-light  text-sm">Axios</div>
+              <div class="flex items-center rounded-full bg-gray-200 px-2 mx-1 font-light  text-sm">REST API</div>
+
+            </div>
+            <div class="flex items-center mt-2">
+              <div class="flex items-center rounded-full bg-gray-200 px-2 mx-1 font-light  text-sm">Django</div>
+              <div class="flex items-center rounded-full bg-gray-200 px-2 mx-1 font-light  text-sm">SQLite</div>
+              <div class="flex items-center rounded-full bg-gray-200 px-2 mx-1 font-light  text-sm">HTML</div>
+              <div class="flex items-center rounded-full bg-gray-200 px-2 mx-1 font-light  text-sm">CSS</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="md:w-1/2 md:mx-12">
+          <p class="font-code text-xl mb-8 mt-24" style="font-weight: 300 !important;">&lt;technologies&gt;</p>
+          <div class="my-8">
+            <div class="flex items-center mt-2">
+              <div class="flex items-center rounded-full bg-gray-200 px-2 mx-1 font-light  text-sm">HTML</div>
+              <div class="flex items-center rounded-full bg-gray-200 px-2 mx-1 font-light  text-sm">JavaScript</div>
+              <div class="flex items-center rounded-full bg-gray-200 px-2 mx-1 font-light  text-sm">SCSS</div>
+              <div class="flex items-center rounded-full bg-gray-200 px-2 mx-1 font-light  text-sm">Python</div>
+              <div class="flex items-center rounded-full bg-gray-200 px-2 mx-1 font-light  text-sm">Keras</div>
+            </div>
+            <div class="flex items-center mt-2">
+              <div class="flex items-center rounded-full bg-gray-200 px-2 mx-1 font-light  text-sm">OpenCV</div>
+              <div class="flex items-center rounded-full bg-gray-200 px-2 mx-1 font-light  text-sm">TKinter</div>
+              <div class="flex items-center rounded-full bg-gray-200 px-2 mx-1 font-light  text-sm">React</div>
+              <div class="flex items-center rounded-full bg-gray-200 px-2 mx-1 font-light  text-sm">Leaflet</div>
+              <div class="flex items-center rounded-full bg-gray-200 px-2 mx-1 font-light  text-sm">Axios</div>
+            </div>
+            <div class="flex items-center mt-2">
+              <div class="flex items-center rounded-full bg-gray-200 px-2 mx-1 font-light  text-sm">REST API</div>
+              <div class="flex items-center rounded-full bg-gray-200 px-2 mx-1 font-light  text-sm">Django</div>
+              <div class="flex items-center rounded-full bg-gray-200 px-2 mx-1 font-light  text-sm">SQLite</div>
+            </div>
+          </div>
+          <hr class="my-12">
+          <div class="my-8">
+            <p class="font-code text-xl mb-8 mt-24" style="font-weight: 300 !important;">&lt;relevant experience&gt;</p>
+            <div class="my-4">
+              <p class=" text-xl"> <span class="">Research Assistant</span> at <a class="underline-thick ease-linear duration-100" target="_blank" href="https://mit.edu/">MIT</a></p>
+            </div>
+            <div class="my-4">
+              <p class=" text-xl"> <span class="">Research Intern</span> at <a class="underline-thick ease-linear duration-100" target="_blank" href="https://stanford.edu/">Stanford University</a></p>
+            </div>
+
+            <div class="my-4">
+              <p class=" text-xl"> <span class="">Student</span> at <a class="underline-thick ease-linear duration-100" target="_blank" href="https://www.usnews.com/education/best-high-schools/new-jersey/districts/middlesex-county-vocational-and-technical-school-district/middlesex-county-academy-for-science-mathematics-and-engineering-technologies-12639">Middlesex County Academy</a></p>
+            </div>
+            <div class="my-4">
+              <p class=" text-xl"> <span class="">Just Tinkering</span> as <a class="underline-thick ease-linear duration-100" target="_blank" href="https://shivamsyal.com">Shivam Syal</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Footer -->
+    <div class="max-w-5xl mx-auto px-6 mt-24 mb-20">
+      <p class="text-xl  mb-4">Say hello 👋</p>
+      <p class="text-l  text-gray-400 mb-3">If you have a question, or just want say hi, my inbox is always open. I'll try my best to get back to you!</p>
+      <p class="text-l  text-gray-400 my-3 mb-15">Shoot me an email at <a class="underline-thick ease-linear duration-100" target="_blank" href="mailto:reachshivamsyal@gmail.com">reachshivamsyal@gmail.com</a>, or connect with me <a class="underline-thick ease-linear duration-100" target="_blank" href="https://linkedin.com/in/shivamsyal">here</a>, <a class="underline-thick ease-linear duration-100" target="_blank" href="https://www.instagram.com/shivam.syal/">here</a> or <a class="underline-thick ease-linear duration-100" target="_blank" href="https://github.com/shivamsyal">here</a>.</p>
+    </div>
+    <div class="max-w-5xl mx-auto px-6 my-8">
+      <p class=" text-xs text-gray-400">Made with <i class="fa-solid fa-heart" style="color: #e25555;"></i> by <a class="underline-thick ease-linear duration-100" target="_blank" href="https://www.github.com/shivamsyal">Shivam Syal</a>. Copyright 2022.</p>
+    </div>
+    </div>
+  </body>
+</html>
