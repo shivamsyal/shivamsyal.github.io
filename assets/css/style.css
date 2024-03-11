@@ -33,6 +33,10 @@ a {
   color: #ccd6f6;
 }
 
+
+
+
+/* 1. Main */
 .cursor {
   position: absolute;
   width: 600px;
@@ -47,8 +51,6 @@ a {
   overflow: hidden;
 }
 
-
-/* 1. Main */
 .fading {
   animation-name: smooth;
   animation-duration: 1s;
