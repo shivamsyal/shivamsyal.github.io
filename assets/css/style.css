@@ -8,6 +8,8 @@ TOC:
 */
 
 
+
+
 /* 0. Basics */
 * {
   -webkit-font-smoothing: antialiased;
@@ -29,6 +31,20 @@ a {
 ::selection {
   background-color: #8892b0;
   color: #ccd6f6;
+}
+
+.cursor {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(67, 26, 163, 1), rgba(26, 51, 163, 1), transparent);
+  pointer-events: none;
+  mix-blend-mode: screen;
+  transition: all 0.05s ease-out;
+  filter: blur(200px);
+  opacity: 60%;
+  overflow: hidden;
 }
 
 

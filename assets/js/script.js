@@ -5,9 +5,6 @@ function openNav() {
 
 }
 
-
-
-
 function closeNav() {
   console.log("here");
   document.getElementById('nav').classList.add("-right-96");
