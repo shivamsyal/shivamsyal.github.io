@@ -37,19 +37,7 @@ a {
 
 
 /* 1. Main */
-.cursor {
-  position: absolute;
-  width: 600px;
-  height: 600px;
-  border-radius: 50%;
-  background: radial-gradient(ellipse, rgba(67, 26, 163, 1), rgba(26, 51, 163, 1), transparent);
-  pointer-events: none;
-  mix-blend-mode: screen;
-  transition: all 0.05s ease-out;
-  filter: blur(200px);
-  opacity: 60%;
-  overflow: hidden;
-}
+
 
 .fading {
   animation-name: smooth;

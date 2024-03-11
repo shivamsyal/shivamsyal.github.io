@@ -27,12 +27,13 @@
     width: 600px;
     height: 600px;
     border-radius: 50%;
-    background: radial-gradient(ellipse, rgba(67, 26, 163, 1), rgba(26, 51, 163, 1), transparent);
+    background: radial-gradient(ellipse, rgba(67, 26, 163, 0.3), rgba(26, 51, 163, 0.2), transparent);
     pointer-events: none;
     mix-blend-mode: screen;
+    -webkit-mix-blend-mode: screen;
     transition: all 0.05s ease-out;
-    filter: blur(200px);
-    opacity: 60%;
+    filter: blur(15px);
+    
     overflow: hidden;"></div>
     <div class="relative pt-0 ">
 
@@ -373,6 +374,18 @@
             cursor.style.left = (e.pageX - 300) + 'px';
             cursor.style.top = (e.pageY - 300) + 'px';
         };
+        var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+    if (isSafari) {
+        // Apply Safari-specific styles
+        cursor.style.webkitFilter = "blur(12px)";
+        cursor.style.filter = "blur(12px)";
+        cursor.style.background = "radial-gradient(ellipse, rgba(67, 26, 163, 0.35), rgba(26, 51, 163, 0.3), rgba(20, 20, 20, 0.2), transparent)";
+    } else {
+        // Apply styles for other browsers
+        cursor.style.filter = "blur(200px)";
+        cursor.style.background = "radial-gradient(ellipse, rgba(67, 26, 163, 0.6), rgba(26, 51, 163, 0.6), transparent)";
+    }
   </script>
 
 
