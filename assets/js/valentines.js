@@ -4,8 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const header = document.getElementById('header');
     const image = document.getElementById('image');
     let imageChanged = false;
-
-    noButton.addEventListener('mouseover', function() {
+    function moveNoButton() {
         const maxX = window.innerWidth - noButton.offsetWidth;
         const maxY = window.innerHeight - noButton.offsetHeight;
         const x = Math.random() * maxX;
@@ -21,7 +20,10 @@ document.addEventListener('DOMContentLoaded', function() {
             imageChanged = true;
             
         }
-    });
+    }
+
+    noButton.addEventListener('mouseover', moveNoButton);
+    noButton.addEventListener('click', moveNoButton);
 
     yesButton.addEventListener('click', function() {
         header.textContent = 'yay!! happy valentine\'s day!';
