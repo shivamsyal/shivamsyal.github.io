@@ -6,23 +6,68 @@
     <title>Valentine's Day</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        #noButton {
-            transition: all 0.3s ease;
+        .game-cell {
+            width: 36px;
+            height: 36px;
+            border: 1px solid #fbcfe8;
+            box-sizing: border-box;
+        }
+        .snake-cell {
+            background: linear-gradient(135deg, #ec4899, #f472b6);
+        }
+        .food-cell img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        .popup-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: 50;
+            justify-content: center;
+            align-items: center;
+        }
+        .popup-overlay.visible {
+            display: flex;
         }
     </style>
 </head>
-<body class="bg-pink-100 flex justify-center items-center h-screen">
-    <div class="bg-white p-8 rounded-lg shadow-lg text-center">
-        <h1 id="header" class="text-3xl font-bold text-pink-500 mb-6">will you be my valentine?</h1>
-        <img id="image" src="assets/img/valentines/initial.png" alt="Valentine's Day Image" class="w-48 h-auto mx-auto mb-6">
-        
-        <div class="flex justify-center gap-10">
-            <button id="yesButton" class="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors">
-                yes
+<body class="bg-pink-100 flex flex-col justify-center items-center min-h-screen">
+    <h1 id="header" class="text-2xl font-bold text-pink-500 mb-4">get the hearts to win!</h1>
+    <p id="scoreDisplay" class="text-pink-600 mb-2">Hearts: 0 / 10</p>
+    <p id="highScoreDisplay" class="text-pink-400 text-sm mb-2">Best: 0</p>
+    
+    <div id="gameContainer" class="inline-block">
+        <div id="gameGrid" class="grid gap-0" style="grid-template-columns: repeat(10, 36px); grid-template-rows: repeat(10, 36px);"></div>
+    </div>
+
+    <div id="gameOverOverlay" class="popup-overlay">
+        <div class="bg-white p-8 rounded-lg shadow-lg text-center max-w-md mx-4">
+            <h2 class="text-2xl font-bold text-pink-500 mb-2">Game Over</h2>
+            <p id="gameOverScore" class="text-pink-600 mb-6">Score: 0</p>
+            <button id="playAgainButton" class="bg-pink-500 text-white px-6 py-2 rounded-lg hover:bg-pink-600 transition-colors">
+                Play Again
             </button>
-            <button id="noButton" class="bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition-colors">
-                no
+        </div>
+    </div>
+
+    <div id="popupOverlay" class="popup-overlay">
+        <div class="bg-white p-8 rounded-lg shadow-lg text-center max-w-md mx-4 relative">
+            <button id="popupCloseButton" class="absolute top-4 right-4 w-8 h-8 text-gray-400 hover:text-gray-600 text-xl leading-none hidden" aria-label="Close">
+                ×
             </button>
+            <h2 id="popupHeader" class="text-3xl font-bold text-pink-500 mb-6">will you be my valentine?</h2>
+            <img id="popupImage" src="assets/img/valentines/initial.png" alt="Valentine's Day" class="w-48 h-auto mx-auto mb-6">
+            <div class="flex justify-center gap-10">
+                <button id="yesButton" class="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors">
+                    yes
+                </button>
+                <button id="noButton" class="bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition-colors">
+                    no
+                </button>
+            </div>
         </div>
     </div>
     <script src="assets/js/valentines.js"></script>
