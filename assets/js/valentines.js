@@ -1,13 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
     const GRID_SIZE = 10;
     const WIN_SCORE = 10;
-    const HIGH_SCORE_KEY = 'valentinesSnakeHighScore';
     const HEART_IMAGE = 'assets/img/valentines/heart.png';
 
     const gameGrid = document.getElementById('gameGrid');
     const header = document.getElementById('header');
     const scoreDisplay = document.getElementById('scoreDisplay');
-    const highScoreDisplay = document.getElementById('highScoreDisplay');
     const gameOverOverlay = document.getElementById('gameOverOverlay');
     const gameOverScore = document.getElementById('gameOverScore');
     const playAgainButton = document.getElementById('playAgainButton');
@@ -103,17 +101,8 @@ document.addEventListener('DOMContentLoaded', function() {
         foodCell.appendChild(img);
     }
 
-    function getHighScore() {
-        return parseInt(localStorage.getItem(HIGH_SCORE_KEY) || '0', 10);
-    }
-
-    function setHighScore(value) {
-        localStorage.setItem(HIGH_SCORE_KEY, String(value));
-    }
-
     function updateScore() {
         scoreDisplay.textContent = `Hearts: ${score} / ${WIN_SCORE}`;
-        highScoreDisplay.textContent = `Best: ${getHighScore()}`;
     }
 
     function tick() {
@@ -177,12 +166,6 @@ document.addEventListener('DOMContentLoaded', function() {
         if (gameLoop) {
             clearInterval(gameLoop);
             gameLoop = null;
-        }
-
-        const prevHigh = getHighScore();
-        if (score > prevHigh) {
-            setHighScore(score);
-            highScoreDisplay.textContent = `Best: ${score}`;
         }
 
         if (won) {
