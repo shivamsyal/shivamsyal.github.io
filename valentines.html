@@ -6,9 +6,16 @@
     <title>Valentine's Day</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        .game-grid {
+            display: flex;
+            flex-wrap: wrap;
+            width: 360px;
+            height: 360px;
+        }
         .game-cell {
             width: 36px;
             height: 36px;
+            flex: 0 0 36px;
             border: 1px solid #fbcfe8;
             box-sizing: border-box;
         }
@@ -40,7 +47,7 @@
     <p id="highScoreDisplay" class="text-pink-400 text-sm mb-2">Best: 0</p>
     
     <div id="gameContainer" class="inline-block">
-        <div id="gameGrid" class="grid gap-0" style="grid-template-columns: repeat(10, 36px); grid-template-rows: repeat(10, 36px);"></div>
+        <div id="gameGrid" class="game-grid"></div>
     </div>
 
     <div id="gameOverOverlay" class="popup-overlay">
